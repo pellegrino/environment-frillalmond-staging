@@ -1,0 +1,50 @@
+Step: step-credential-initializer-fh8wq:
+
+{"level":"warn","ts":1565862893.8964162,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565862893.8995895,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-zqhkb:
+
+{"level":"warn","ts":1565862894.9592035,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565862894.9630432,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-**********-environment-fri-fctxr:
+
+{"level":"warn","ts":1565862899.9761853,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565862900.6287894,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/environment-frillalmond-staging.git @ 2511fd1627d17f913012486a5b376dd289ce9448 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:2511fd1627d17f913012486a5b376dd289ce9448,1:ceb3674d2d982f0c0748b318c9715d8b45006697","time":"2019-08-15T09:55:01Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin ceb3674d2d982f0c0748b318c9715d8b45006697: 2511fd1627d17f913012486a5b376dd289ce9448: in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran git reset --hard 2511fd1627d17f913012486a5b376dd289ce9448 in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran git merge ceb3674d2d982f0c0748b318c9715d8b45006697 in ","time":"2019-08-15T09:55:02Z"}
+MERGED SHA SUBJECT
+ceb3674d2  chore: Promote testing-**-spring to version 0.0.1
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin ceb3674d2d982f0c0748b318c9715d8b45006697: 2511fd1627d17f913012486a5b376dd289ce9448: in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran git reset --hard 2511fd1627d17f913012486a5b376dd289ce9448 in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-15T09:55:02Z"}
+{"level":"debug","msg":"ran git merge ceb3674d2d982f0c0748b318c9715d8b45006697 in ","time":"2019-08-15T09:55:02Z"}
+MERGED SHA SUBJECT
+ceb3674d2  chore: Promote testing-**-spring to version 0.0.1
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-15T09:55:03Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-15T09:55:03Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-15T09:55:05Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-15T09:55:07Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for **********-environment-frillalmond-staging-PR-1-1","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"upserted PipelineResource **********-environment-frillalm for the git repository https://github.com/**********/environment-frillalmond-staging.git and branch PR-1","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"upserted Task **********-environment-frillalm-from-build-pack-1","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"upserted Pipeline **********-environment-frillalm-1","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"created PipelineRun **********-environment-frillalm-1","time":"2019-08-15T09:55:08Z"}
+{"level":"info","msg":"created PipelineStructure **********-environment-frillalm-1","time":"2019-08-15T09:55:08Z"}
